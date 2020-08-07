@@ -1,0 +1,21 @@
+/*-=-=-=-=-=-=-=-=- Mixin -=-=-=-=-=-=-=-=-*/
+@mixin menu-underline ($opacity){
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    background-color: $_glb_main-hover-color;
+    border-radius: 3px;
+    opacity: $opacity;
+    transition-duration: $_glb_transition-duration-time;
+    transition-timing-function: $_glb_cubic-hover;
+}
+
+@mixin benefits-images($images-map){
+    @each $key, $val in $images-map{
+        li:nth-child(#{$key})
+        h3::before{ background-image: url("#{$val}"); }
+    }
+}

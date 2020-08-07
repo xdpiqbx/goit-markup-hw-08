@@ -1,0 +1,71 @@
+/* ================================= Placeholders ================================= */
+%flex-center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+%social-links{
+/* -=-=-=-=-=-=-=-=- round social links -=-=-=-=-=-=-=-=- */
+    justify-content: center;
+    li:not(:last-child){
+        margin-right: 10px;
+    }
+    a{ display: block; }
+    
+    .link-icon{
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        fill: $_glb_swg-icons-main-color;
+        transition-duration: $_glb_transition-duration-time; 
+        transition-timing-function: $_glb_cubic-hover;
+    }
+    
+    & a:hover .link-icon,
+    & a:focus .link-icon{
+        fill:$_glb_main-font-on-dark-fon-color;
+        background-color: $_glb_main-hover-color;
+    }
+}
+
+%modal-input-textarea{
+/* -=-=-=-=-=-=-=-=- in modal window for all inputs and textarea -=-=-=-=-=-=-=-=- */
+    width: 448px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    &:focus{
+        outline: none;
+        border: 1px solid $_glb_main-hover-color;
+     }
+}
+
+%button-base{
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- Big blue button -=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    background-color: $_glb_main-hover-color;
+    color: $_glb_main-font-on-dark-fon-color;
+    box-shadow: $_glb_button-shadow;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.9em;
+    letter-spacing: 0.06em;
+    transition-duration: $_glb_transition-duration-time; 
+    transition-timing-function: $_glb_cubic-hover;
+    &:hover,
+    &:focus{
+        fill: $_glb_main-font-color;
+        color: $_glb_main-font-color;
+        background-color: $_glb_main-bg-color;
+    }
+}

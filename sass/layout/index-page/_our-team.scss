@@ -1,0 +1,55 @@
+.secondary-bg-color{
+    background-color: $_glb_secondary-bg-color;
+}
+
+.section-title{
+    font-size: 36px;
+    line-height: 1.17em;
+}
+
+.our-team{
+    text-align: center;
+    
+    &-list{
+        @extend %flex-center;
+        justify-content: center;
+    }
+    
+    h2{
+        margin-bottom: 50px;
+    }
+    
+    &-member{
+        margin-right: 30px;
+        padding-bottom: 24px;
+        background-color:$_glb_member-card-bg-color;
+        width: 270px;
+        text-align: center;
+        background: $_glb_member-card-bg-color;
+        box-shadow: $_glb_our-team-member-shadow;
+        border-radius: 0px 0px 4px 4px;
+
+        img{ margin-bottom: 30px; }
+        
+        h3{
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        b{
+            display: inline-block;
+            margin-bottom: 16px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+            color: $_glb_secondary-font-color;
+        }
+    }
+    &-member:last-child{ margin-right: 0; }
+}
+
+.social{
+    @extend %flex-center;
+    @extend %social-links;
+}

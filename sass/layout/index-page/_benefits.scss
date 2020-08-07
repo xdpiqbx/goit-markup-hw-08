@@ -1,0 +1,40 @@
+.hidden-header-h{
+    line-height: 0;
+    font-size: 0;
+}
+
+    .benefits-list{
+        @extend %flex-center;
+        li{
+            width: 270px;
+            text-align: left;
+            margin-right: 30px;
+        }
+        li:last-child{
+            margin-right: 0;
+        }
+        &-item-header{
+            margin-bottom: 10px;
+        }
+        &-item-header::before{
+            content: "";
+            display: block;
+            width: 270px;
+            height: 120px;
+            background-color: $_glb_secondary-bg-color;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        @include benefits-images($images-map-for-benefits);
+    }
+
+        .benefits-list p{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.7em;
+            color: $_glb_secondary-font-color;
+        }

@@ -1,0 +1,44 @@
+/*in section clients ===================== index.html ================================================*/
+.clients{
+    &-list li:not(:last-child){ margin-right: 30px; }
+    .section-title{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+.clients-list{
+    @extend %flex-center;
+    li{
+        width: 170px;
+        height: 90px;
+        border: 1px solid $_glb_swg-icons-main-color;
+        border-radius: 4px;
+        
+        &:hover,
+        &:focus-within{
+            outline: none;
+            border: 1px solid $_glb_main-hover-color;
+            transition-duration: $_glb_transition-duration-time; 
+            transition-timing-function: $_glb_cubic-hover;
+        }
+    }
+}
+    .client-list-item-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        svg{
+            fill: $_glb_swg-icons-main-color;
+            transition-duration: $_glb_transition-duration-time; 
+            transition-timing-function: $_glb_cubic-hover;
+        }
+
+        &:hover svg,
+        &:focus svg{
+            fill: $_glb_main-hover-color;
+        }
+    }

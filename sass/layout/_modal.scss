@@ -1,0 +1,185 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $_glb_backdrop-bg-color;
+    transition-duration: $_glb_transition-duration-time;
+    &.is-hidden{
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(1.5);
+    }
+}
+
+    .modal-window{
+        @extend %flex-center;
+        position: relative;
+        width: 528px;
+        height: 581px;
+        margin: 0 auto;
+        padding: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $_glb_modal-window-bg-color;
+        box-shadow: $_glb_modal-window-shadow;
+        border-radius: 4px;
+        transition-duration: $_glb_transition-duration-time;
+        font-size: 14px;
+    }
+
+    .modal-window-form{
+        @extend %flex-center;
+        
+        label{
+            color: $_glb_secondary-font-color;
+            cursor: pointer;
+        }
+
+        svg{
+            cursor: pointer;
+        }
+    }
+
+
+    
+        .close-modal{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 8px;
+            right: 8px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid $_glb_close-modal-border-color;
+            border-radius: 50%;
+            background-color: $_glb_modal-window-bg-color;
+            cursor: pointer;
+            transition-duration: $_glb_transition-duration-time; 
+            transition-timing-function: $_glb_cubic-hover;
+            
+            &:hover,
+            &:focus{ fill: $_glb_main-hover-color; }
+        }
+
+
+        .modal-header{
+            display: block;
+            margin: 0 auto 30px auto;
+            font-size: 20px;
+            line-height: 1.150em;
+        }
+
+        .form-field{
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 28px;
+        }
+    
+        .modal-input{
+            @extend %modal-input-textarea;
+            height: 40px;
+            padding-left: 42px;
+        }
+
+        .text{
+            @extend %modal-input-textarea;
+            height: 120px;
+            padding: 12px 16px;
+        }
+
+        .svg-for-input{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 16px; 
+            top: 11px;
+            width: 18px;
+            height: 18px;
+
+            .modal-input:focus ~ &{
+                fill: $_glb_main-hover-color;
+            }
+        }
+
+        .modal-label{
+            position: absolute;
+            top: 13px;
+            left: 42px;
+            transition-duration: $_glb_transition-duration-time;
+
+            .modal-input:focus + &,
+            .modal-input:not(:placeholder-shown) + &{
+                top:-18px;
+                left:16px;
+                color: $_glb_main-hover-color;
+            }
+        }
+        
+        .form-comment{ left: 16px; }
+
+        .label-checkbox-agreement{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .input-checkbox-agreement{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            position: absolute;
+        }
+
+        .checkbox-icon{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 7px;
+            border: 2px solid black;
+            border-radius: 2px;
+
+            &:hover, input:focus + &{
+                background-color: $_glb_main-hover-color;
+                border: none;
+                border-radius: 2px;
+            }
+
+            .input-checkbox-agreement:checked + &{
+                background-color: $_glb_main-hover-color;
+                border: none;
+                background-image: url(../images/modal-svg/check.svg);
+                border-radius: 2px;
+            }
+        }
+
+
+    .link-terms{
+            position: relative;
+            color: $_glb_main-hover-color;
+        &::after{
+            /* -=-=-=- link underline -=-=-=- */
+            content: "";
+            position: absolute;
+            width: 100%;
+            bottom: 0.07em;
+            left: 0;
+            display: block;
+            height: 0.05em;
+            background-color: $_glb_main-hover-color;
+            transition-duration: $_glb_transition-duration-time; 
+            transition-timing-function: $_glb_cubic-hover;
+        }
+        &:hover::after{
+            opacity: 0;
+        }
+    }
+
+    .modal-button-send{
+        @extend %button-base;
+    }

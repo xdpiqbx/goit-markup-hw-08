@@ -1,0 +1,67 @@
+$_glb_main-font-family: 'Roboto', sans-serif;
+$_glb_logo-font-family: 'Raleway', sans-serif;
+
+$_glb_main-font-color: #212121;
+$_glb_main-font-on-dark-fon-color: #ffffff;
+$_glb_secondary-font-color: #757575;
+$_glb_address-footer-a-color: rgba(255, 255, 255, 0.6);
+
+$_glb_secondary-bg-color: #F5F4FA;
+$_glb_main-bg-color: #ffffff;
+$_glb_member-card-bg-color: #ffffff;
+$_glb_what-we-do-card-header-bg-color: rgba(70, 73, 109, 0.8);
+$_glb_portfolio-card-hover-bg: rgba(33, 150, 243, 0.9);
+$_glb_footer-bg-color: #2F303A;
+$_glb_backdrop-bg-color: rgba(0, 0, 0, 0.2);
+$_glb_social-links :rgba(255, 255, 255, 0.1);
+$_glb_modal-window-bg-color: #ffffff;
+
+$_glb_header-border-color: #ECECEC;
+$_glb_clients-border-color: #AFB1B8;
+$_glb_portfolio-card-border-color: #EEEEEE;
+$_glb_footer-subscribe-input-border-color: rgba(255, 255, 255, 0.3);
+$_glb_close-modal-border-color: rgba(0, 0, 0, 0.1);
+
+$_glb_footer-subscribe-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+$_glb_swg-icons-main-color: #AFB1B8;
+
+$_glb_portfolio-button-shadow:
+    0px 2px 2px rgba(0, 0, 0, 0.12),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+
+$_glb_our-team-member-shadow:
+    0px 2px 1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+
+$_glb_portfolio-card-shadow:
+    1px 4px 6px rgba(0, 0, 0, 0.16),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+
+$_glb_button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+$_glb_modal-window-shadow:
+    0px 2px 1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+
+$_glb_hero-gradient-1: rgba(47, 48, 58, 0.8);
+$_glb_hero-gradient-2: rgba(47, 48, 58, 0.8);
+
+$_glb_main-hover-color: #2196F3;
+
+$_glb_max-width: 1200px;
+
+$_glb_transition-duration-time: 250ms;
+$_glb_cubic-hover: cubic-bezier(0.4, 0, 0.2, 1);
+
+/* -=-=-=-=-=-=-=-=- data -=-=-=-=-=-=-=-=- */
+$images-map-for-benefits: (
+    1: "../images/benefits-svg/antenna.svg",
+    2: "../images/benefits-svg/clock.svg",
+    3: "../images/benefits-svg/diagram.svg",
+    4: "../images/benefits-svg/astronaut.svg"
+);

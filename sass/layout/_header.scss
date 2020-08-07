@@ -1,0 +1,95 @@
+/* Header ===================================================================== */
+header{
+    color: $_glb_main-font-color;
+    border: 1px solid $_glb_header-border-color;
+    min-height: 80px;
+    font-size: 14px;
+    
+    li, a{
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        color: $_glb_main-font-color;
+    }
+}
+
+    .wrapper-in-header{
+        @extend %flex-center;
+        min-height: 80px;
+        justify-content: space-between;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .logo{
+        margin-right: 85px;
+        font-family: $_glb_logo-font-family;
+        font-size: 26px;
+        color: $_glb_main-font-color;
+        text-decoration: none;
+
+        span{ color: $_glb_main-hover-color; }
+    }
+
+    .top{
+        @extend %flex-center;
+    }
+
+    .top-nav-ul{
+        @extend %flex-center;
+        li:not(:last-child) { margin-right: 50px; }
+        a { min-height: 80px; }
+    }
+
+        
+    .addres-header{
+        @extend %flex-center;
+        a{
+            height: 100%;
+            color: $_glb_secondary-font-color;
+            fill: $_glb_secondary-font-color;
+            transition-duration: $_glb_transition-duration-time;
+            transition-timing-function: $_glb_cubic-hover;
+        }
+        .contact{
+            @extend %flex-center;
+            li:not(:last-child){ margin-right: 30px; }
+            span{ padding-left: 10px; }
+        }
+        .address-icon{
+            display: flex;
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    /*menu hover effect ==================== */
+    .active-page{
+        color: $_glb_main-hover-color;
+    }
+
+    .hover-effect:hover,
+    .hover-effect:focus{
+        color: $_glb_main-hover-color;
+        fill: $_glb_main-hover-color;
+    }
+
+    /*menu underline ==================== */
+    .active-page{
+        position: relative;
+        &::after{
+            @include menu-underline(1);
+        }
+    }
+
+    .menu-hover-underline{
+        position: relative;
+        &::after{
+            @include menu-underline(0);
+        }
+
+        &:hover::after,
+        &:focus::after{
+            opacity: 1;
+        }
+    }

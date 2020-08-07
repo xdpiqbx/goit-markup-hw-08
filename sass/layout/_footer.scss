@@ -1,0 +1,99 @@
+/*Footer ===================================================================== */
+footer{
+    color: $_glb_main-font-on-dark-fon-color;
+    background-color: $_glb_footer-bg-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    vertical-align: top;
+}
+
+.wrapper-in-footer{
+    @extend %flex-center;
+    align-items: baseline;
+    .join b,
+    .footer-subscribe b{
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+}
+
+    .logo-and-contact{
+        margin-right: 69px;
+        width: 231px;
+        .logo{
+            display: flex;
+            color: $_glb_main-font-on-dark-fon-color;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        
+    }
+    
+    .addres-footer{
+        ul li{
+            margin-bottom: 9px;
+            line-height: 1.7em;
+            font-size: 14px;
+            a{
+                font-style: normal;
+                font-weight: 400;
+                color: $_glb_address-footer-a-color;
+            }
+        }
+    } 
+        
+    .join{
+        width: 206px;
+        margin-right: 94px;
+
+        .social .link-icon{
+            fill: $_glb_main-font-on-dark-fon-color;
+            background-color:$_glb_social-links;
+        }
+    }
+
+    .footer-subscribe{
+        width: 570px;
+
+        .footer-subscribe-form{
+            @extend %flex-center;
+            position: relative;
+        }
+    }
+
+    .footer-subscribe-input{
+        border-radius: 4px;
+        width: 358px;
+        padding-left: 15px;
+        color: $_glb_main-font-on-dark-fon-color;
+        border: 1px solid $_glb_footer-subscribe-input-border-color;
+        background-color: $_glb_footer-bg-color;
+        filter: $_glb_footer-subscribe-filter;
+    }
+
+    .footer-subscribe-label{
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition-duration: $_glb_transition-duration-time;
+        transition-timing-function: $_glb_cubic-hover;
+        color: $_glb_secondary-font-color;
+    }
+
+    .footer-subscribe-input:focus + .footer-subscribe-label,
+    .footer-subscribe-input:not(:placeholder-shown) + .footer-subscribe-label{
+        opacity: 0;
+    }
+
+    .footer-subscribe-button{
+        @extend %flex-center;
+        @extend %button-base;
+        margin-left: 12px;
+        fill: $_glb_main-font-on-dark-fon-color;
+        svg{
+            margin-left: 10px;
+        }
+    }

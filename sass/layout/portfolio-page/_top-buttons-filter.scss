@@ -1,0 +1,31 @@
+.btn-group{
+    @extend %flex-center;
+    margin-bottom: 50px;
+    text-align: center;
+    justify-content: center;
+
+    li:not(:last-child){
+        margin-right: 8px;
+    }
+
+    button{
+        padding: 6px 22px;
+        font-size: 16px;
+        line-height: 1.6em;
+        background-color: $_glb_secondary-bg-color;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        border: none;
+        box-shadow: $_glb_portfolio-button-shadow;
+        border-radius: 4px;
+        outline: none;
+        transition-duration: $_glb_transition-duration-time; 
+        transition-timing-function: $_glb_cubic-hover;
+
+        &:hover,
+        &:focus{
+            background-color: $_glb_main-hover-color;
+            color: $_glb_secondary-bg-color;
+        }
+    }
+}

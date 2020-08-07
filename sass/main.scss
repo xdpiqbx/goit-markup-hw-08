@@ -1,0 +1,23 @@
+@import './utils/variables';
+
+/* -=-=-=-=-=-=-=-=-=- base -=-=-=-=-=-=-=-=-=- */
+@import './base/normalize';
+@import './base/my-reset';
+
+/* -=-=-=-=-=-=-=-=-=- utils -=-=-=-=-=-=-=-=-=- */
+@import './utils/placeholders';
+@import './utils/mixins';
+
+/* -=-=-=-=-=-=-=-=-=- layout -=-=-=-=-=-=-=-=-=- */
+@import './layout/header';
+@import './layout/footer';
+@import './layout/modal';
+
+@import './layout/index-page/hero';
+@import './layout/index-page/benefits';
+@import './layout/index-page/what-we-do';
+@import './layout/index-page/our-team';
+@import './layout/index-page/clients';
+
+@import './layout/portfolio-page/top-buttons-filter';
+@import './layout/portfolio-page/portfolio-list';

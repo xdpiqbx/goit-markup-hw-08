@@ -1,0 +1,74 @@
+.ul-portfolio{
+    @extend %flex-center;
+}
+
+    .portfolio-item{
+        width: 370px;
+        border: 1px solid $_glb_portfolio-card-border-color;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        transition-duration: $_glb_transition-duration-time; 
+        transition-timing-function: $_glb_cubic-hover;
+        
+        &:hover,
+        &:focus-within{ box-shadow: $_glb_portfolio-card-shadow; }
+        
+        &:nth-child(3n){ margin-right: 0; }
+
+        &:nth-last-child(-n+3){ margin-bottom: 0; } 
+    }
+        .portfolio-item-link{
+            display: block;
+            position: relative;
+            height: 100%;
+            outline: none;
+
+            &:hover .hover-text,
+            &:focus .hover-text{ top: 0; }
+        }
+    
+    .wrapper-for-img-hover-text{
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+        
+        .hover-text{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 63px 24px;
+            background: $_glb_portfolio-card-hover-bg;
+            color: $_glb_main-font-on-dark-fon-color;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.556em;
+            top: 100%;
+            transition-property: top;
+            transition-duration: $_glb_transition-duration-time; 
+            transition-timing-function: $_glb_cubic-hover;
+        }
+    }
+
+    .wrapper-for-header-filter{
+        padding-left: 24px;
+        margin-bottom: 20px;
+        text-align: left;            
+    }
+
+        .item-header{
+            margin-bottom: 9px;
+            color: $_glb_main-font-color;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 2.25em;
+            letter-spacing: 0.06em;
+        }
+        
+        .item-filter{
+            color: $_glb_secondary-font-color;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+        }
