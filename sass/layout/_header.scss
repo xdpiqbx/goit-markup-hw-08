@@ -58,18 +58,14 @@ header{
         z-index: 100;
         border-top: 1px solid $_glb_header-border-color;
         background-color: $_glb_main-bg-color;
-        /* opacity: 0;
+        opacity: 0;
         &.is-open{
             opacity: 1;
-        } */
-        transform: translateX(100%);
-        &.is-open{
-            transform: translateX(0);
         }
         transition-duration: $_glb_transition-duration-time;
         transition-timing-function: $_glb_cubic-hover;
         @media screen and (min-width: 769px){
-            transform: translateX(0);
+            opacity: 1;
             position: relative;
             top: 0;
             padding: 0;

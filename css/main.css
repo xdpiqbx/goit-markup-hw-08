@@ -610,12 +610,7 @@ header li, header a {
   z-index: 100;
   border-top: 1px solid #ECECEC;
   background-color: #ffffff;
-  /* opacity: 0;
-        &.is-open{
-            opacity: 1;
-        } */
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  opacity: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -623,14 +618,12 @@ header li, header a {
 }
 
 .header-menu-wrapper.is-open {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  opacity: 1;
 }
 
 @media screen and (min-width: 769px) {
   .header-menu-wrapper {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    opacity: 1;
     position: relative;
     top: 0;
     padding: 0;
