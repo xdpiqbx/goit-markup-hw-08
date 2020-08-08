@@ -40,11 +40,12 @@ img {
 }
 
 .container{
-    margin: 0 auto;
-    max-width: $_glb_max-width;
     padding-left: 15px;
     padding-right: 15px;
+    @media (min-width :$_glb_max-width-mobile){
+        margin: 0 auto;
+        max-width: $_glb_max-width;
+    }
 }
-
 
 .index-no-border{ border: 0; }
