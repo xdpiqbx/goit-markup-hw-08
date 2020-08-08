@@ -28,6 +28,18 @@
             background-position: center;
         }
 
+        @media screen and (max-width: 480px){
+            li{
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+            &-item-header::before{
+                width: 100%;
+            }
+        }
+
         @include benefits-images($images-map-for-benefits);
     }
 

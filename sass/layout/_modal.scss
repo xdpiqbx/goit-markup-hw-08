@@ -12,13 +12,14 @@
         pointer-events: none;
         transform: scale(1.5);
     }
+    z-index: 200;
 }
 
     .modal-window{
         @extend %flex-center;
         position: relative;
         width: 528px;
-        height: 581px;
+        min-height: 581px;
         margin: 0 auto;
         padding: 40px;
         top: 50%;
@@ -28,6 +29,10 @@
         border-radius: 4px;
         transition-duration: $_glb_transition-duration-time;
         font-size: 14px;
+        @media screen and (max-width: 480px){
+            width: 100%;
+            padding: 50px;
+        }
     }
 
     .modal-window-form{
@@ -40,6 +45,9 @@
 
         svg{
             cursor: pointer;
+        }
+        @media screen and (max-width: 480px){
+            width: 100%;
         }
     }
 
@@ -84,6 +92,9 @@
             @extend %modal-input-textarea;
             height: 40px;
             padding-left: 42px;
+            @media screen and (max-width: 480px){
+                width: 100%;
+            }
         }
 
         .text{

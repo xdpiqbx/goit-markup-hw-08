@@ -36,4 +36,7 @@
             text-transform: uppercase;
         }
     }
+    @media screen and (max-width: 1249px){
+        display: none;
+    }
 }

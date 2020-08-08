@@ -14,7 +14,6 @@ header{
 
     .wrapper-in-header{
             display: flex;
-            flex-wrap: wrap;
             padding-top: 0;
             padding-bottom: 0;
     }
@@ -28,7 +27,7 @@ header{
         margin-right: 0;
         span{ color: $_glb_main-hover-color; }
         
-        @media (min-width :$_glb_max-width-mobile){   
+        @media screen and (min-width: 769px){
             margin-right: 85px;
             font-size: 26px;
         }
@@ -41,7 +40,7 @@ header{
         padding-top: 16px;
         padding-bottom: 16px;
         flex-grow: 1;
-        @media (min-width :$_glb_max-width-mobile){
+        @media screen and (min-width: 769px){
             padding: 0;
             display: flex;
         }
@@ -58,7 +57,7 @@ header{
         z-index: 100;
         border-top: 1px solid $_glb_header-border-color;
         background-color: $_glb_main-bg-color;
-        @media (min-width :$_glb_max-width-mobile){
+        @media screen and (min-width: 769px){
             position: relative;
             top: 0;
             padding: 0;
@@ -83,7 +82,7 @@ header{
                 padding-top: 0;
             }
         }
-        @media (min-width :$_glb_max-width-mobile){
+        @media screen and (min-width: 769px){
             flex-direction: row;
             flex-wrap: wrap;
             li{
@@ -101,9 +100,6 @@ header{
     }
         
     .addres-header{
-        @media (min-width :$_glb_max-width-mobile){
-            margin-left: auto;
-        }
         a{
             display: flex;
             justify-content: center;
@@ -119,7 +115,7 @@ header{
         }
         .contact{
             display: flex;
-            flex-direction: column;  
+            flex-direction: column;
             span{ padding-left: 10px; }
             li{
                 justify-content: center;
@@ -128,17 +124,18 @@ header{
                 margin-bottom: 16px;
             }
         }
-        @media (min-width :$_glb_max-width-mobile){
+        @media screen and (min-width: 769px){ /* всё что больше */
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            align-items: center;
+            margin-left: auto;
             .address-icon{
                 display: flex;
             }
+        }
+        @media screen and (min-width: 1600px) {
             .contact{
-                flex-wrap: wrap;
                 flex-direction: row;
-                justify-content: center;
+                align-items: center;
                 li:not(:last-child){
                     margin-right: 30px;
                     margin-bottom: 0;
@@ -156,7 +153,7 @@ header{
         padding: 0;
         background-color: $_glb_main-bg-color;
         
-        @media (min-width :$_glb_max-width-mobile){
+        @media screen and (min-width: 769px){
             display: none;
         }
     }

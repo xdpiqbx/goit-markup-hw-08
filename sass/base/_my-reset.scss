@@ -37,14 +37,19 @@ img {
     margin: 0 auto;
     padding-top: 94px;
     padding-bottom: 94px;
+    @media screen and (max-width: 480px){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
 .container{
     padding-left: 15px;
     padding-right: 15px;
-    @media (min-width :$_glb_max-width-mobile){
+    min-width: 358px;
+    @media (min-width : 481px){
         margin: 0 auto;
-        max-width: $_glb_max-width;
+        max-width: 1200px;
     }
 }
 

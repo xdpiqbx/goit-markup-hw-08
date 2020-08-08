@@ -19,12 +19,16 @@
         margin-bottom: 50px;
     }
     
-    &-member{
+    &-member:last-child{ margin-right: 0; }
+}
+    .our-team-member{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-right: 30px;
         padding-bottom: 24px;
         background-color:$_glb_member-card-bg-color;
         width: 270px;
-        text-align: center;
         background: $_glb_member-card-bg-color;
         box-shadow: $_glb_our-team-member-shadow;
         border-radius: 0px 0px 4px 4px;
@@ -45,9 +49,17 @@
             text-align: center;
             color: $_glb_secondary-font-color;
         }
+        @media screen and (max-width: 480px){
+            margin-right: 0;
+            margin-bottom: 30px;
+            width: 100%;
+            img{
+                display: block;
+                max-width: 100%;
+            }
+            &:last-child{ margin-bottom: 0; }
+        }
     }
-    &-member:last-child{ margin-right: 0; }
-}
 
 .social{
     @extend %flex-center;
