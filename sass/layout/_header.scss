@@ -1,65 +1,100 @@
 /* Header ===================================================================== */
 header{
-    color: $_glb_main-font-color;
-    border: 1px solid $_glb_header-border-color;
-    min-height: 80px;
-    font-size: 14px;
-    
-    li, a{
-        display: flex;
-        align-items: center;
-        font-weight: 700;
         color: $_glb_main-font-color;
+        border: 1px solid $_glb_header-border-color;
+        min-height: 80px;
+        font-size: 14px;
+ 
+    li, a{
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            color: $_glb_main-font-color;
     }
 }
 
     .wrapper-in-header{
-        @extend %flex-center;
-        min-height: 80px;
-        justify-content: space-between;
-        padding-top: 0;
-        padding-bottom: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            min-height: 80px;
+            justify-content: space-between;
+            padding-top: 0;
+            padding-bottom: 0;
     }
 
     .logo{
-        margin-right: 85px;
         font-family: $_glb_logo-font-family;
-        font-size: 26px;
+        font-size: 24px;
+        line-height: 1.16em;
         color: $_glb_main-font-color;
         text-decoration: none;
-
         span{ color: $_glb_main-hover-color; }
+
+        @media (min-width :480px){   
+            margin-right: 85px;
+            font-size: 26px;
+        }
     }
 
     .top{
-        @extend %flex-center;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-start;
     }
 
     .top-nav-ul{
-        @extend %flex-center;
-        li:not(:last-child) { margin-right: 50px; }
-        a { min-height: 80px; }
+        display: flex;
+        flex-direction: column;
+        
+        @media (min-width :480px){
+            flex-direction: row;
+            flex-wrap: wrap;
+            li:not(:last-child) { margin-right: 50px; }
+            a { min-height: 80px; }
+        }
     }
-
         
     .addres-header{
-        @extend %flex-center;
+        margin-left: auto;
         a{
+            display: flex;
+            justify-content: center;
             height: 100%;
             color: $_glb_secondary-font-color;
             fill: $_glb_secondary-font-color;
             transition-duration: $_glb_transition-duration-time;
             transition-timing-function: $_glb_cubic-hover;
         }
-        .contact{
-            @extend %flex-center;
-            li:not(:last-child){ margin-right: 30px; }
-            span{ padding-left: 10px; }
-        }
         .address-icon{
-            display: flex;
             width: 16px;
             height: 16px;
+        }
+        .contact{
+            display: flex;
+            flex-direction: column;
+            span{ padding-left: 10px; }
+            li:not(:last-child){
+                margin-bottom: 16px;
+            }
+        }
+        @media (min-width :480px){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .address-icon{
+                display: flex;
+            }
+            .contact{
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                li:not(:last-child){
+                    margin-right: 30px;
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 

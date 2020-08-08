@@ -11,19 +11,26 @@
     li:not(:last-child){
         margin-right: 10px;
     }
-    a{ display: block; }
-    
-    .link-icon{
-        border-radius: 50%;
+
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 44px;
         height: 44px;
+        border-radius: 50%;
         fill: $_glb_swg-icons-main-color;
         transition-duration: $_glb_transition-duration-time; 
         transition-timing-function: $_glb_cubic-hover;
     }
+
+    .link-icon{
+        width: 20px;
+        height: 20px;
+    }
     
-    & a:hover .link-icon,
-    & a:focus .link-icon{
+    & a:hover,
+    & a:focus{
         fill:$_glb_main-font-on-dark-fon-color;
         background-color: $_glb_main-hover-color;
     }
@@ -62,6 +69,7 @@
     letter-spacing: 0.06em;
     transition-duration: $_glb_transition-duration-time; 
     transition-timing-function: $_glb_cubic-hover;
+    fill: $_glb_main-font-on-dark-fon-color;
     &:hover,
     &:focus{
         fill: $_glb_main-font-color;

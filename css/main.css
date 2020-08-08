@@ -405,7 +405,7 @@ img {
 
 /* -=-=-=-=-=-=-=-=-=- utils -=-=-=-=-=-=-=-=-=- */
 /* ================================= Placeholders ================================= */
-.wrapper-in-header, .top, .top-nav-ul, .addres-header, .addres-header .contact, .wrapper-in-footer, .footer-subscribe .footer-subscribe-form, .footer-subscribe-button, .modal-window, .modal-window-form, .benefits-list, .what-we-do .what-we-do-list, .our-team-list, .social, .clients-list, .btn-group, .ul-portfolio {
+.wrapper-in-footer, .footer-subscribe .footer-subscribe-form, .footer-subscribe-button, .modal-window, .modal-window-form, .benefits-list, .what-we-do .what-we-do-list, .our-team-list, .social, .clients-list, .btn-group, .ul-portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -428,13 +428,18 @@ img {
 }
 
 .social a {
-  display: block;
-}
-
-.social .link-icon {
-  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
   fill: #AFB1B8;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
@@ -442,8 +447,13 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social a:hover .link-icon,
-.social a:focus .link-icon {
+.social .link-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.social a:hover,
+.social a:focus {
   fill: #ffffff;
   background-color: #2196F3;
 }
@@ -491,6 +501,7 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #ffffff;
 }
 
 .footer-subscribe-button:hover, .modal-button-send:hover, .hero button:hover, .footer-subscribe-button:focus, .modal-button-send:focus, .hero button:focus {
@@ -521,6 +532,14 @@ header li, header a {
 }
 
 .wrapper-in-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 80px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -530,9 +549,9 @@ header li, header a {
 }
 
 .logo {
-  margin-right: 85px;
   font-family: "Raleway", sans-serif;
-  font-size: 26px;
+  font-size: 24px;
+  line-height: 1.16em;
   color: #212121;
   text-decoration: none;
 }
@@ -541,15 +560,63 @@ header li, header a {
   color: #2196F3;
 }
 
-.top-nav-ul li:not(:last-child) {
-  margin-right: 50px;
+@media (min-width: 480px) {
+  .logo {
+    margin-right: 85px;
+    font-size: 26px;
+  }
 }
 
-.top-nav-ul a {
-  min-height: 80px;
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.top-nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 480px) {
+  .top-nav-ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .top-nav-ul li:not(:last-child) {
+    margin-right: 50px;
+  }
+  .top-nav-ul a {
+    min-height: 80px;
+  }
+}
+
+.addres-header {
+  margin-left: auto;
 }
 
 .addres-header a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   color: #757575;
   fill: #757575;
@@ -559,20 +626,60 @@ header li, header a {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.addres-header .contact li:not(:last-child) {
-  margin-right: 30px;
+.addres-header .address-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.addres-header .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .addres-header .contact span {
   padding-left: 10px;
 }
 
-.addres-header .address-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 16px;
-  height: 16px;
+.addres-header .contact li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 480px) {
+  .addres-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .addres-header .address-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .addres-header .contact {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .addres-header .contact li:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
 }
 
 /*menu hover effect ==================== */
@@ -684,9 +791,13 @@ footer {
   margin-right: 94px;
 }
 
-.join .social .link-icon {
+.join .social a {
   fill: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join .social a:hover {
+  background-color: #2196F3;
 }
 
 .footer-subscribe {
@@ -728,7 +839,6 @@ footer {
 
 .footer-subscribe-button {
   margin-left: 12px;
-  fill: #ffffff;
 }
 
 .footer-subscribe-button svg {
@@ -952,8 +1062,8 @@ footer {
   height: 600px;
   max-width: 1600px;
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url("../images/hero-image.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero-image.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url("../../../images/hero/hero-image.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../../../images/hero/hero-image.jpg");
   background-position: center;
 }
 

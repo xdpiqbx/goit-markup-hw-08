@@ -48,15 +48,17 @@ footer{
         width: 206px;
         margin-right: 94px;
 
-        .social .link-icon{
+        .social a{
             fill: $_glb_main-font-on-dark-fon-color;
             background-color:$_glb_social-links;
+            &:hover{
+                background-color: $_glb_main-hover-color;
+            }
         }
     }
 
     .footer-subscribe{
         width: 570px;
-
         .footer-subscribe-form{
             @extend %flex-center;
             position: relative;
@@ -92,7 +94,6 @@ footer{
         @extend %flex-center;
         @extend %button-base;
         margin-left: 12px;
-        fill: $_glb_main-font-on-dark-fon-color;
         svg{
             margin-left: 10px;
         }

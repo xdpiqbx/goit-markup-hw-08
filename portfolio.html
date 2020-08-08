@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
@@ -19,28 +20,27 @@
                     <li><a href="#" class="active-page hover-effect">Портфолио</a></li>
                     <li><a href="#" class="hover-effect menu-hover-underline">Контакты</a></li>
                 </ul>
+                <address class="addres-header">
+                    <ul class="contact">
+                        <li>
+                            <a href="mailto:info@devstudio.com" class="hover-effect" aria-label="e-mail">
+                                <svg class="address-icon">
+                                    <use href="./images/sprite.svg#envelope"></use>
+                                </svg>
+                                <span>info@devstudio.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+380961111111" class="hover-effect" aria-label="Телефон">
+                                <svg class="address-icon">
+                                    <use href="./images/sprite.svg#smartphone"></use>
+                                </svg>
+                                <span>+380 (96) 111 11 11</span>
+                            </a>
+                        </li>
+                    </ul>
+                </address>
             </nav>
-
-            <address class="addres-header">
-                <ul class="contact">
-                    <li>
-                        <a href="mailto:info@devstudio.com" class="hover-effect" aria-label="e-mail">
-                            <svg class="address-icon">
-                                <use href="./images/sprite.svg#envelope"></use>
-                            </svg>
-                            <span>info@devstudio.com</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+380961111111" class="hover-effect" aria-label="Телефон">
-                            <svg class="address-icon">
-                                <use href="./images/sprite.svg#smartphone"></use>
-                            </svg>
-                            <span>+380 (96) 111 11 11</span>
-                        </a>
-                    </li>
-                </ul>
-            </address>
         </div>
     </header>
     <main>
@@ -256,7 +256,7 @@
                     <button type="submit" class="footer-subscribe-button">
                         <span>Подписатья</span>
                         <svg width="24" height="24">
-                            <use href="./images/sprite-modal.svg#icon-send"></use>
+                            <use href="./images/sprite.svg#footer-icon-send"></use>
                         </svg>
                     </button>
                 </form>
