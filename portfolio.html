@@ -14,7 +14,7 @@
         <div class="wrapper-in-header container">
             <nav class="top">
                 <a class="logo" href="./index.html" aria-label="Главная страница"><span>Web</span> Studio</a>
-                <div class="header-menu-wrapper">
+                <div class="header-menu-wrapper" data-menu aria-expanded="true">
                     <ul class="top-nav-ul">
                         <li><a href="./index.html" class="hover-effect menu-hover-underline">Студия</a></li>
                         <li><a href="#" class="active-page hover-effect">Портфолио</a></li>
@@ -41,9 +41,10 @@
                         </ul>
                     </address>
                 </div>
-                <button class="menu-close">
-                    <svg width="40" height="40" class="link-icon">
-                        <use href="./images/sprite.svg#menu-burger-close"></use>
+                <button type="button" class="menu-button is-open" data-menu-button>
+                    <svg width="40" height="40" class="link-icon" aria-label="Переключатель мобильного меню">
+                        <use class="icon-close" href="./images/sprite.svg#menu-burger-close"></use>
+                        <use class="icon-menu" href="./images/sprite.svg#menu-burger"></use>
                     </svg>
                 </button>
             </nav>
@@ -272,5 +273,6 @@
 
         </div>
     </footer>
+    <script src="./js/burger.js"></script>
 </body>
 </html>
