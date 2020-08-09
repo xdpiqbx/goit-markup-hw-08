@@ -26,6 +26,7 @@ header{
         color: $_glb_main-font-color;
         text-decoration: none;
         margin-right: 0;
+        z-index: 2;
         span{ color: $_glb_main-hover-color; }
         
         @media screen and (min-width: 769px){
@@ -38,10 +39,12 @@ header{
     .top{
         display: flex;
         position: relative;
-        padding-top: 16px;
-        padding-bottom: 16px;
         flex-grow: 1;
+        height: 60px;
         @media screen and (min-width: 769px){
+            padding-top: 16px;
+            padding-bottom: 16px;
+            height: 100%;
             padding: 0;
             display: flex;
         }
@@ -55,7 +58,7 @@ header{
         left: -15px;
         width: calc(100% + 30px);
         padding: 60px;
-        z-index: 100;
+        z-index: 1;
         border-top: 1px solid $_glb_header-border-color;
         background-color: $_glb_main-bg-color;
         opacity: 0;
@@ -160,6 +163,7 @@ header{
         border: none;
         padding: 0;
         background-color: transparent;
+        z-index: 2;
 
         .icon-close{
             display: none;

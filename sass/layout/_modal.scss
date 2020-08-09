@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 15px;
     background-color: $_glb_backdrop-bg-color;
     transition-duration: $_glb_transition-duration-time;
     &.is-hidden{
@@ -18,10 +19,10 @@
     .modal-window{
         @extend %flex-center;
         position: relative;
-        width: 528px;
+        width: 100%;
         min-height: 581px;
         margin: 0 auto;
-        padding: 40px;
+        padding: 50px;
         top: 50%;
         transform: translateY(-50%);
         background-color: $_glb_modal-window-bg-color;
@@ -29,14 +30,15 @@
         border-radius: 4px;
         transition-duration: $_glb_transition-duration-time;
         font-size: 14px;
-        @media screen and (max-width: 480px){
-            width: 100%;
-            padding: 50px;
+        @media screen and (min-width: 481px){
+            width: 528px;
+            padding: 40px;
         }
     }
 
     .modal-window-form{
         @extend %flex-center;
+        width: 100%;
         
         label{
             color: $_glb_secondary-font-color;
@@ -45,9 +47,6 @@
 
         svg{
             cursor: pointer;
-        }
-        @media screen and (max-width: 480px){
-            width: 100%;
         }
     }
 
@@ -65,10 +64,10 @@
             border: 1px solid $_glb_close-modal-border-color;
             border-radius: 50%;
             background-color: $_glb_modal-window-bg-color;
+            fill: $_glb_main-font-color;
             cursor: pointer;
             transition-duration: $_glb_transition-duration-time; 
             transition-timing-function: $_glb_cubic-hover;
-            
             &:hover,
             &:focus{ fill: $_glb_main-hover-color; }
         }
@@ -77,12 +76,14 @@
         .modal-header{
             display: block;
             margin: 0 auto 30px auto;
+            text-align: center;
             font-size: 20px;
             line-height: 1.150em;
         }
 
         .form-field{
             position: relative;
+            width: 100%;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 28px;
@@ -92,9 +93,7 @@
             @extend %modal-input-textarea;
             height: 40px;
             padding-left: 42px;
-            @media screen and (max-width: 480px){
-                width: 100%;
-            }
+            width: 100%;
         }
 
         .text{
@@ -136,8 +135,13 @@
 
         .label-checkbox-agreement{
             display: flex;
+            justify-content: center;
             align-items: center;
             cursor: pointer;
+            font-size: 11px;
+            @media screen and (min-width: 481px){
+                font-size: 14px;
+            }
         }
 
         .input-checkbox-agreement{
@@ -145,13 +149,14 @@
             -moz-appearance: none;
             appearance: none;
             position: absolute;
+            border: hidden;
         }
 
         .checkbox-icon{
-            display: inline-block;
+            display: block;
             width: 16px;
             height: 16px;
-            margin-right: 7px;
+            margin-right: 8px;
             border: 2px solid black;
             border-radius: 2px;
 
@@ -165,6 +170,8 @@
                 background-color: $_glb_main-hover-color;
                 border: none;
                 background-image: url(../images/modal-svg/check.svg);
+                background-repeat: no-repeat;
+                background-position: center;
                 border-radius: 2px;
             }
         }

@@ -1,8 +1,16 @@
 .btn-group{
     @extend %flex-center;
-    margin-bottom: 50px;
-    text-align: center;
-    justify-content: center;
+    margin-bottom: 35px;
+    justify-content: start;
+
+    @media screen and (min-width: 481px){
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    li{
+        margin-bottom: 15px;
+    }
 
     li:not(:last-child){
         margin-right: 8px;
