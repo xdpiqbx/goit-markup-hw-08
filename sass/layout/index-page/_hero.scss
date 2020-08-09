@@ -28,6 +28,7 @@
 
     button{
         @extend %button-base;
+        margin: 0 auto;
         box-shadow: $_glb_button-shadow;
     }
 }

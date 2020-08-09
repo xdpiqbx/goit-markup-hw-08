@@ -8,38 +8,52 @@ footer{
 }
 
 .wrapper-in-footer{
-    @extend %flex-center;
-    align-items: baseline;
+    flex-direction: column;
     .join b,
     .footer-subscribe b{
         display: block;
         margin-right: 0;
         margin-bottom: 20px;
     }
-    
+    @media screen and (min-width: 768px){
+        display: flex;
+        align-items: baseline;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px){
+        flex-wrap: nowrap;
+    } 
 }
 
     .logo-and-contact{
-        margin-right: 69px;
-        width: 231px;
+        min-width: 231px;
         .logo{
             display: flex;
             color: $_glb_main-font-on-dark-fon-color;
             margin-right: 0;
             margin-bottom: 20px;
         }
-        @media screen and (max-width: 480px){
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 60px;
+        @media screen and (min-width: 768px){
+            flex-basis: 50%;
         }
-        
+        @media screen and (min-width: 1200px){
+            margin-right: 69px;
+            align-items: flex-start;
+            width: fit-content;
+            margin-bottom: 0;
+        }
     }
     
     .addres-footer{
         ul li{
+            display: flex;
+            justify-content: center;
             margin-bottom: 9px;
             line-height: 1.7em;
             font-size: 14px;
@@ -48,20 +62,21 @@ footer{
                 font-weight: 400;
                 color: $_glb_address-footer-a-color;
             }
-            @media screen and (max-width: 480px){
-                display: flex;
-                justify-content: center;
+            @media screen and (min-width: 1200px){
+                justify-content: start;
             }
         }
-        @media screen and (max-width: 480px){
-            margin-bottom: 60px;
+        @media screen and (min-width: 768px){
+            margin-bottom: 0;
         }
     } 
         
     .join{
-        width: 206px;
-        margin-right: 94px;
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+        min-width: 206px;
         .social a{
             fill: $_glb_main-font-on-dark-fon-color;
             background-color:$_glb_social-links;
@@ -69,74 +84,86 @@ footer{
                 background-color: $_glb_main-hover-color;
             }
         }
-        @media screen and (max-width: 480px){
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-right: 0;
-            margin-bottom: 60px;
+        @media screen and (min-width: 768px){
+            flex-basis: 50%;
+        }
+        @media screen and (min-width: 1200px){
+            margin-right: 94px;
+            align-items: flex-start;
         }
     }
 
     .footer-subscribe{
-        width: 570px;
-        .footer-subscribe-form{
-            @extend %flex-center;
-            position: relative;
-        }
-        @media screen and (max-width: 480px){
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        @media screen and (min-width: 1200px){
+            align-items: flex-start;
         }
     }
 
-    .footer-subscribe-input{
-        border-radius: 4px;
-        width: 358px;
-        height: 50px;
-        padding-left: 15px;
-        color: $_glb_main-font-on-dark-fon-color;
-        border: 1px solid $_glb_footer-subscribe-input-border-color;
-        background-color: $_glb_footer-bg-color;
-        filter: $_glb_footer-subscribe-filter;
-        @media screen and (max-width: 480px){
-            width: 100%;
+    .footer-subscribe-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        @media screen and (min-width: 1200px){
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: start;
         }
     }
 
     .footer-subscribe-label{
         position: relative;
-        @media screen and (max-width: 480px){
-            width: 100%;
-            margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 450px;
+        margin-bottom: 10px;
+        @media screen and (min-width: 1200px){
+            margin-bottom: 0;
         }
     }
-    
-    
-    .footer-subscribe-form-span{
-        position: absolute;
-        left: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition-duration: $_glb_transition-duration-time;
-        transition-timing-function: $_glb_cubic-hover;
-        color: $_glb_secondary-font-color;
-    }
 
-    .footer-subscribe-input:focus + .footer-subscribe-form-span,
-    .footer-subscribe-input:not(:placeholder-shown) + .footer-subscribe-form-span{
-        opacity: 0;
-    }
+        .footer-subscribe-input{
+            height: 50px;
+            padding-left: 15px;
+            width: 100%;
+            max-width: 450px;
+            color: $_glb_main-font-on-dark-fon-color;
+            background-color: $_glb_footer-bg-color;
+            border: 1px solid $_glb_footer-subscribe-input-border-color;
+            border-radius: 4px;
+            filter: $_glb_footer-subscribe-filter;
+        }
+
+    
+    
+            .footer-subscribe-form-span{
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition-duration: $_glb_transition-duration-time;
+                transition-timing-function: $_glb_cubic-hover;
+                color: $_glb_secondary-font-color;
+            }
+
+                .footer-subscribe-input:focus + .footer-subscribe-form-span,
+                .footer-subscribe-input:not(:placeholder-shown) + .footer-subscribe-form-span{
+                    opacity: 0;
+                }
 
     .footer-subscribe-button{
-        @extend %flex-center;
         @extend %button-base;
-        margin-left: 12px;
+        margin-left: 0;
+        flex-shrink: 0;
         svg{
             margin-left: 10px;
         }
-        @media screen and (max-width: 480px){
-            margin-left: 0;
+        @media screen and (min-width: 768px){
+            margin-left: 12px;
         }
     }

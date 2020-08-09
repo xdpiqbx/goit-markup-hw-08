@@ -419,7 +419,7 @@ img {
 
 /* -=-=-=-=-=-=-=-=-=- utils -=-=-=-=-=-=-=-=-=- */
 /* ================================= Placeholders ================================= */
-.wrapper-in-footer, .footer-subscribe .footer-subscribe-form, .footer-subscribe-button, .modal-window, .modal-window-form, .benefits-list, .what-we-do .what-we-do-list, .our-team-list, .social, .clients-list, .btn-group, .ul-portfolio {
+.modal-window, .modal-window-form, .benefits-list, .what-we-do .what-we-do-list, .our-team-list, .social, .clients-list, .btn-group, .ul-portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,9 +487,9 @@ img {
 
 .footer-subscribe-button, .modal-button-send, .hero button {
   /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- Big blue button -=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -567,7 +567,7 @@ header li, header a {
   color: #2196F3;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .logo {
     margin-right: 85px;
     font-size: 26px;
@@ -585,7 +585,7 @@ header li, header a {
   height: 60px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .top {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -624,7 +624,7 @@ header li, header a {
   opacity: 1;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .header-menu-wrapper {
     opacity: 1;
     position: relative;
@@ -670,7 +670,7 @@ header li, header a {
   padding-top: 0;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .top-nav-ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -739,7 +739,7 @@ header li, header a {
   margin-bottom: 16px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .addres-header {
     /* всё что больше */
     display: -webkit-box;
@@ -802,7 +802,7 @@ header li, header a {
   display: none;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .menu-button {
     display: none;
   }
@@ -874,9 +874,10 @@ footer {
 }
 
 .wrapper-in-footer {
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .wrapper-in-footer .join b,
@@ -886,9 +887,44 @@ footer {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .wrapper-in-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper-in-footer {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
 .logo-and-contact {
-  margin-right: 69px;
-  width: 231px;
+  min-width: 231px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 60px;
 }
 
 .logo-and-contact .logo {
@@ -900,24 +936,33 @@ footer {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) {
   .logo-and-contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    margin-right: 0;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-and-contact {
+    margin-right: 69px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 0;
   }
 }
 
 .addres-footer ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 9px;
   line-height: 1.7em;
   font-size: 14px;
@@ -929,26 +974,33 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 1200px) {
   .addres-footer ul li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) {
   .addres-footer {
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 }
 
 .join {
-  width: 206px;
-  margin-right: 94px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+  min-width: 206px;
 }
 
 .join .social a {
@@ -960,73 +1012,103 @@ footer {
   background-color: #2196F3;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) {
   .join {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-right: 0;
-    margin-bottom: 60px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-right: 94px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
 .footer-subscribe {
-  width: 570px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
-.footer-subscribe .footer-subscribe-form {
-  position: relative;
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 1200px) {
   .footer-subscribe {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
-.footer-subscribe-input {
-  border-radius: 4px;
-  width: 358px;
-  height: 50px;
-  padding-left: 15px;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: #2F303A;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+.footer-subscribe-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
-@media screen and (max-width: 480px) {
-  .footer-subscribe-input {
-    width: 100%;
+@media screen and (min-width: 1200px) {
+  .footer-subscribe-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 
 .footer-subscribe-label {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 10px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 1200px) {
   .footer-subscribe-label {
-    width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
+}
+
+.footer-subscribe-input {
+  height: 50px;
+  padding-left: 15px;
+  width: 100%;
+  max-width: 450px;
+  color: #ffffff;
+  background-color: #2F303A;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .footer-subscribe-form-span {
@@ -1048,16 +1130,18 @@ footer {
 }
 
 .footer-subscribe-button {
-  margin-left: 12px;
+  margin-left: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .footer-subscribe-button svg {
   margin-left: 10px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) {
   .footer-subscribe-button {
-    margin-left: 0;
+    margin-left: 12px;
   }
 }
 
@@ -1084,7 +1168,7 @@ footer {
 
 .modal-window {
   position: relative;
-  width: 100%;
+  max-width: 528px;
   min-height: 581px;
   margin: 0 auto;
   padding: 50px;
@@ -1100,9 +1184,10 @@ footer {
   font-size: 14px;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 769px) {
   .modal-window {
     width: 528px;
+    height: 581px;
     padding: 40px;
   }
 }
@@ -1231,7 +1316,7 @@ footer {
   font-size: 11px;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 769px) {
   .label-checkbox-agreement {
     font-size: 14px;
   }
@@ -1327,6 +1412,7 @@ footer {
 }
 
 .hero button {
+  margin: 0 auto;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

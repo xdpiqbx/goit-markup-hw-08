@@ -29,7 +29,7 @@ header{
         z-index: 2;
         span{ color: $_glb_main-hover-color; }
         
-        @media screen and (min-width: 769px){
+        @media screen and (min-width: 768px){
             margin-right: 85px;
             font-size: 26px;
         }
@@ -41,7 +41,7 @@ header{
         position: relative;
         flex-grow: 1;
         height: 60px;
-        @media screen and (min-width: 769px){
+        @media screen and (min-width: 768px){
             padding-top: 16px;
             padding-bottom: 16px;
             height: 100%;
@@ -67,7 +67,7 @@ header{
         }
         transition-duration: $_glb_transition-duration-time;
         transition-timing-function: $_glb_cubic-hover;
-        @media screen and (min-width: 769px){
+        @media screen and (min-width: 768px){
             opacity: 1;
             position: relative;
             top: 0;
@@ -93,7 +93,7 @@ header{
                 padding-top: 0;
             }
         }
-        @media screen and (min-width: 769px){
+        @media screen and (min-width: 768px){
             flex-direction: row;
             flex-wrap: wrap;
             li{
@@ -135,7 +135,7 @@ header{
                 margin-bottom: 16px;
             }
         }
-        @media screen and (min-width: 769px){ /* всё что больше */
+        @media screen and (min-width: 768px){ /* всё что больше */
             display: flex;
             align-items: center;
             margin-left: auto;
@@ -177,7 +177,7 @@ header{
             display: none;
         }
         
-        @media screen and (min-width: 769px){
+        @media screen and (min-width: 768px){
             display: none;
         }
     }
