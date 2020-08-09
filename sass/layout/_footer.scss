@@ -28,22 +28,21 @@ footer{
 
     .logo-and-contact{
         min-width: 231px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 25%;
+        margin-bottom: 60px;
         .logo{
             display: flex;
             color: $_glb_main-font-on-dark-fon-color;
             margin-right: 0;
             margin-bottom: 20px;
         }
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 60px;
         @media screen and (min-width: 768px){
             flex-basis: 50%;
         }
         @media screen and (min-width: 1200px){
-            margin-right: 69px;
             align-items: flex-start;
             width: fit-content;
             margin-bottom: 0;
@@ -76,7 +75,7 @@ footer{
         flex-direction: column;
         align-items: center;
         margin-bottom: 60px;
-        min-width: 206px;
+        flex-basis: 25%;
         .social a{
             fill: $_glb_main-font-on-dark-fon-color;
             background-color:$_glb_social-links;
@@ -88,7 +87,6 @@ footer{
             flex-basis: 50%;
         }
         @media screen and (min-width: 1200px){
-            margin-right: 94px;
             align-items: flex-start;
         }
     }
@@ -97,7 +95,7 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        flex-basis: 100%;
         @media screen and (min-width: 1200px){
             align-items: flex-start;
         }
