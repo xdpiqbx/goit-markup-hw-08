@@ -72,8 +72,7 @@
     fill: $_glb_main-font-on-dark-fon-color;
     &:hover,
     &:focus{
-        fill: $_glb_main-font-color;
-        color: $_glb_main-font-color;
-        background-color: $_glb_main-bg-color;
+        fill: $_glb_main-font-on-dark-fon-color;
+        background-color: $_glb_button-hover-color;
     }
 }

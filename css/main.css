@@ -531,9 +531,8 @@ img {
 }
 
 .footer-subscribe-button:hover, .modal-button-send:hover, .hero button:hover, .footer-subscribe-button:focus, .modal-button-send:focus, .hero button:focus {
-  fill: #212121;
-  color: #212121;
-  background-color: #ffffff;
+  fill: #ffffff;
+  background-color: #188CE8;
 }
 
 /*-=-=-=-=-=-=-=-=- Mixin -=-=-=-=-=-=-=-=-*/
