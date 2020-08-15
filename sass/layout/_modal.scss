@@ -32,13 +32,18 @@
         font-size: 14px;
         @media screen and (min-width: 769px){
             width: 528px;
-            height: 581px;
             padding: 40px;
+        }
+        @media screen and (max-height: 565px){
+            height: fit-content;
         }
     }
 
     .modal-window-form{
-        @extend %flex-center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         
         label{
@@ -48,6 +53,9 @@
 
         svg{
             cursor: pointer;
+        }
+        @media screen and (max-height: 565px){
+            position: relative;
         }
     }
 
@@ -71,6 +79,12 @@
             transition-timing-function: $_glb_cubic-hover;
             &:hover,
             &:focus{ fill: $_glb_main-hover-color; }
+            @media screen and (max-height: 565px){
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 50% 0% 0% 50%;
+                right: 0px;
+            }
         }
 
 
@@ -80,28 +94,56 @@
             text-align: center;
             font-size: 20px;
             line-height: 1.150em;
+            @media screen and (max-height: 565px){
+                margin-bottom: 14px;
+            }
         }
 
         .form-field{
             position: relative;
             width: 100%;
+            height: 40px;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 28px;
+            @media screen and (max-height: 565px){
+                margin-bottom: 14px;
+                height: 30px;
+            }
+        }
+
+        .textarea-block{
+            position: relative;
+            width: 100%;
+            height: 120px;
+            margin-bottom: 20px;
+            textarea{
+                height: 100%;
+            }
+            @media screen and (max-height: 565px){
+                height: 60px;
+                margin-bottom: 14px;
+            }
+        }
+
+        .agreement-block{
+            margin-bottom: 30px;
+            @media screen and (max-height: 565px){
+                margin-bottom: 14px;
+            }
         }
     
         .modal-input{
             @extend %modal-input-textarea;
-            height: 40px;
-            padding-left: 42px;
+            height: 100%;
             width: 100%;
+            padding-left: 42px;
+            &.text{
+                padding: 12px 16px;
+            }
         }
 
-        .text{
-            @extend %modal-input-textarea;
-            height: 120px;
-            padding: 12px 16px;
-        }
+        
 
         .svg-for-input{
             position: absolute;
@@ -116,6 +158,9 @@
             .modal-input:focus ~ &{
                 fill: $_glb_main-hover-color;
             }
+            @media screen and (max-height: 565px){
+                top: 5px;
+            }
         }
 
         .modal-label{
@@ -129,6 +174,15 @@
                 top:-18px;
                 left:16px;
                 color: $_glb_main-hover-color;
+            }
+            @media screen and (max-height: 565px){
+                top: 7px;
+                .modal-input:focus + &,
+                .modal-input:not(:placeholder-shown) + &{
+                    font-size: 12px;
+                    top:-12px;
+                    left:16px;
+            }
             }
         }
         
@@ -201,4 +255,8 @@
 
     .modal-button-send{
         @extend %button-base;
+        @media screen and (max-height: 565px){
+            height: 30px;
+            padding: 3px;
+        }
     }

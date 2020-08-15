@@ -425,7 +425,7 @@ img {
 
 /* -=-=-=-=-=-=-=-=-=- utils -=-=-=-=-=-=-=-=-=- */
 /* ================================= Placeholders ================================= */
-.modal-window, .modal-window-form, .benefits-list, .what-we-do .what-we-do-list, .our-team-list, .social, .clients-list, .btn-group, .ul-portfolio {
+.modal-window, .benefits-list, .what-we-do .what-we-do-list, .our-team-list, .social, .clients-list, .btn-group, .ul-portfolio {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -463,7 +463,7 @@ img {
   background-color: #2196F3;
 }
 
-.modal-input, .text {
+.modal-input {
   /* -=-=-=-=-=-=-=-=- in modal window for all inputs and textarea -=-=-=-=-=-=-=-=- */
   width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -471,7 +471,7 @@ img {
   cursor: pointer;
 }
 
-.modal-input:focus, .text:focus {
+.modal-input:focus {
   outline: none;
   border: 1px solid #2196F3;
 }
@@ -481,8 +481,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   width: 200px;
   height: 50px;
   border: none;
@@ -578,12 +577,14 @@ header li, header a {
   border-top: 1px solid #ECECEC;
   background-color: #ffffff;
   opacity: 0;
+  pointer-events: none;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-wrapper.is-open {
   opacity: 1;
+  pointer-events: all;
 }
 
 @media screen and (min-width: 768px) {
@@ -720,6 +721,10 @@ header li, header a {
   .menu-button {
     display: none;
   }
+}
+
+.menu-button:hover {
+  fill: #2196F3;
 }
 
 /*menu hover effect ==================== */
@@ -1016,12 +1021,21 @@ footer {
 @media screen and (min-width: 769px) {
   .modal-window {
     width: 528px;
-    height: 581px;
     padding: 40px;
   }
 }
 
+@media screen and (max-height: 565px) {
+  .modal-window {
+    height: fit-content;
+  }
+}
+
 .modal-window-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -1032,6 +1046,12 @@ footer {
 
 .modal-window-form svg {
   cursor: pointer;
+}
+
+@media screen and (max-height: 565px) {
+  .modal-window-form {
+    position: relative;
+  }
 }
 
 .close-modal {
@@ -1056,6 +1076,15 @@ footer {
   fill: #2196F3;
 }
 
+@media screen and (max-height: 565px) {
+  .close-modal {
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50% 0% 0% 50%;
+    right: 0px;
+  }
+}
+
 .modal-header {
   display: block;
   margin: 0 auto 30px auto;
@@ -1064,22 +1093,63 @@ footer {
   line-height: 1.150em;
 }
 
+@media screen and (max-height: 565px) {
+  .modal-header {
+    margin-bottom: 14px;
+  }
+}
+
 .form-field {
   position: relative;
   width: 100%;
+  height: 40px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 28px;
 }
 
-.modal-input {
-  height: 40px;
-  padding-left: 42px;
-  width: 100%;
+@media screen and (max-height: 565px) {
+  .form-field {
+    margin-bottom: 14px;
+    height: 30px;
+  }
 }
 
-.text {
+.textarea-block {
+  position: relative;
+  width: 100%;
   height: 120px;
+  margin-bottom: 20px;
+}
+
+.textarea-block textarea {
+  height: 100%;
+}
+
+@media screen and (max-height: 565px) {
+  .textarea-block {
+    height: 60px;
+    margin-bottom: 14px;
+  }
+}
+
+.agreement-block {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-height: 565px) {
+  .agreement-block {
+    margin-bottom: 14px;
+  }
+}
+
+.modal-input {
+  height: 100%;
+  width: 100%;
+  padding-left: 42px;
+}
+
+.modal-input.text {
   padding: 12px 16px;
 }
 
@@ -1098,6 +1168,12 @@ footer {
   fill: #2196F3;
 }
 
+@media screen and (max-height: 565px) {
+  .svg-for-input {
+    top: 5px;
+  }
+}
+
 .modal-label {
   position: absolute;
   top: 13px;
@@ -1110,6 +1186,18 @@ footer {
   top: -18px;
   left: 16px;
   color: #2196F3;
+}
+
+@media screen and (max-height: 565px) {
+  .modal-label {
+    top: 7px;
+  }
+  .modal-input:focus + .modal-label,
+  .modal-input:not(:placeholder-shown) + .modal-label {
+    font-size: 12px;
+    top: -12px;
+    left: 16px;
+  }
 }
 
 .form-comment {
@@ -1183,6 +1271,13 @@ footer {
 
 .link-terms:hover::after {
   opacity: 0;
+}
+
+@media screen and (max-height: 565px) {
+  .modal-button-send {
+    height: 30px;
+    padding: 3px;
+  }
 }
 
 .hero {

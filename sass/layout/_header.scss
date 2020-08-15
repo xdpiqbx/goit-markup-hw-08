@@ -62,8 +62,10 @@ header{
         border-top: 1px solid $_glb_header-border-color;
         background-color: $_glb_main-bg-color;
         opacity: 0;
+        pointer-events: none;
         &.is-open{
             opacity: 1;
+            pointer-events: all;
         }
         transition-duration: $_glb_transition-duration-time;
         transition-timing-function: $_glb_cubic-hover;
@@ -164,21 +166,24 @@ header{
         padding: 0;
         background-color: transparent;
         z-index: 2;
-
+        
         .icon-close{
             display: none;
         }
-
+        
         &.is-open .icon-close{
             display: block;
         }
-
+        
         &.is-open .icon-menu{
             display: none;
         }
         
         @media screen and (min-width: 768px){
             display: none;
+        }
+        &:hover{
+            fill:$_glb_main-hover-color;
         }
     }
 
