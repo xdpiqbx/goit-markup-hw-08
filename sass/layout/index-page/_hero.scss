@@ -35,7 +35,7 @@
                             url("../images/adaptiv/mobile-mobile-hero-3x-1440.jpg");
     }
 
-    @media  screen and (min-width: 768px){
+    @media  screen and (min-width: $tablet-width){
         background-image:
         linear-gradient(to right,
             $_glb_hero-gradient-1,
@@ -63,7 +63,7 @@
         }
     }
 
-    @media  screen and (min-width: 1200px){
+    @media  screen and (min-width: $desktop-width){
         height: 600px;
         max-width: 1600px;
         background-image:
@@ -105,7 +105,7 @@
         letter-spacing: 0.06em;
         text-transform: uppercase;
 
-        @media  screen and (min-width: 1200px){
+        @media  screen and (min-width: $desktop-width){
             font-size: 44px;
         }
     }

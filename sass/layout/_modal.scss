@@ -30,7 +30,7 @@
         border-radius: 4px;
         transition-duration: $_glb_transition-duration-time;
         font-size: 14px;
-        @media screen and (min-width: 769px){
+        @media screen and (min-width: $tablet-width){
             width: 528px;
             padding: 40px;
         }
@@ -194,7 +194,7 @@
             align-items: center;
             cursor: pointer;
             font-size: 11px;
-            @media screen and (min-width: 769px){
+            @media screen and (min-width: $tablet-width){
                 font-size: 14px;
             }
         }

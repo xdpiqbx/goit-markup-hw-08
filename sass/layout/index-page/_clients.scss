@@ -28,7 +28,7 @@
         }
     }
     
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: $tablet-width){
         li{
             width: calc(100% / 3 - 30px);
             &:nth-child(odd){ margin-right: 0; }
@@ -37,7 +37,7 @@
         }
     }
 
-    @media screen and (min-width: 1200px){
+    @media screen and (min-width: $desktop-width){
         li{
             width: 170px;
             margin-bottom: 0;

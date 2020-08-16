@@ -13,7 +13,7 @@
         &:hover,
         &:focus-within{ box-shadow: $_glb_portfolio-card-shadow; }
         
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: $tablet-width){
             width: calc(100% / 2 - 30px);
 
             &:nth-child(odd){
@@ -24,7 +24,7 @@
                 margin-left: 15px;
             }
         }
-        @media screen and (min-width: 1200px){
+        @media screen and (min-width: $desktop-width){
             margin-right: 30px;
             width: 370px;
             &:nth-child(3n){ margin-right: 0; }

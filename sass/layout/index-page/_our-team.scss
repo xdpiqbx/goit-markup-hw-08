@@ -57,12 +57,12 @@
             color: $_glb_secondary-font-color;
         }
 
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: $tablet-width){
             flex-basis: calc(50% - 30px);
             &:nth-child(odd){ margin-right: 30px; }
             &:nth-last-child(-n+2){ margin-bottom: 0; }
         }
-        @media screen and (min-width: 1200px){
+        @media screen and (min-width: $desktop-width){
             flex-basis: unset;
             width: 270px;
             margin-right: 30px;
