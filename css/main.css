@@ -401,7 +401,7 @@ img {
   margin: 0 auto;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 495px) {
   .container {
     width: 480px;
   }
