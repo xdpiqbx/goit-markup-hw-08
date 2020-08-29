@@ -1703,7 +1703,6 @@ footer {
 }
 
 .portfolio-item {
-  width: 100%;
   border: 1px solid #EEEEEE;
   overflow: hidden;
   transition-duration: 250ms;
