@@ -355,6 +355,7 @@ body {
   color: #212121;
   background-color: #ffffff;
   letter-spacing: 0.03em;
+  min-width: 495px;
 }
 
 a {
@@ -397,8 +398,8 @@ img {
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  min-width: 358px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 495px) {
@@ -1525,7 +1526,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   margin-bottom: 30px;
   margin-right: 0;
   padding-bottom: 24px;
@@ -1541,8 +1541,6 @@ footer {
 
 .our-team-member img {
   margin-bottom: 30px;
-  display: block;
-  max-width: 100%;
 }
 
 .our-team-member h3 {

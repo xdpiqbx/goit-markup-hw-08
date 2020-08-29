@@ -11,6 +11,7 @@ body{
     color: $_glb_main-font-color;
     background-color: $_glb_main-bg-color;
     letter-spacing: 0.03em;
+    min-width: $mobile-width;
 }
 
 
@@ -46,8 +47,8 @@ img {
 .container{
     padding-left: 15px;
     padding-right: 15px;
-    min-width: 358px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     @media (min-width: $mobile-width){
         width: 480px;
     }
